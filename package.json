@@ -1,0 +1,23 @@
+{
+      "_moduleAliases": {
+            "@root": ".",
+            "@testframework": "pages",
+            "@classes": "lib/pages",
+            "@helpers": "lib/helpers",
+            "@pom": "pages",
+            "@common": "lib/util",
+            "@entities": "data/entities",
+            "@genii": "lib/genii"
+      },
+      "dependencies": {
+            "faker": "^4.1.0",
+            "lodash": "^4.17.15",
+            "minimist": "^1.2.5",
+            "module-alias": "^2.2.2",
+            "moment": "^2.24.0",
+            "moment-immutable-methods": "^1.0.9",
+            "path": "^0.12.7",
+            "testcafe": "^1.8.4",
+            "tracer": "^1.0.3"
+      }
+}
