@@ -18,7 +18,7 @@ fixture(fxn).page(targetURL);
 
 let pom = {};
 pom.login = require('@pom/login_page.js');
-pom.nvbb = require('@pom/navBarButtons.js');
+pom.nvbb = require('@pom/widgets/navBarButtons.js');
 pom.mvp = require('@pom/my_view_page.js');
 
 const login_page = new pom.login.login_page();
