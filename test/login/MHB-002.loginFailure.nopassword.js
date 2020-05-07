@@ -1,5 +1,5 @@
 /**
- * MHB-004.loginKO.checkMsgText.js
+ * MHB-002.loginFailure.nopassword.js 
  * @author Francisco Mancardi [francisco.mancardi@tesisquare.com] 
  * @author Francisco Mancardi [francisco.mancardi@gmail.com]  
  */
@@ -36,32 +36,7 @@ test
     console.log(stdOutLog.prefix + uf);
     var op = await sw.login.login({user: 'administrator', 
                                    password: ''});
-
+    
     await t.expect(op.status).eql('ko','Login Has to fail');
-
-    uf = 'Step Check User Feedback is present';
-    console.log(stdOutLog.prefix + uf);
-    await t.expect(login_page.ux.loginIssues.exists).ok(uf);
     console.log(ok + uf);
-
-    uf = 'Step Check User Feedback Text is Valid';    
-    console.log(stdOutLog.prefix + uf);
-
-    var userFeedback = 
-        {"english":"Your account may be disabled or blocked or the username/password you entered is incorrect.",
-         "italiano": "L'account potrebbe essere stato disabilitato o bloccato oppure potresti aver immesso un nome e/o una password errata."
-        };
-
-    var msgIsOK = false;
-    var msgOnUX = await login_page.ux.loginIssues.innerText;
-    msgOnUX = msgOnUX.trim();
-    for (var language in userFeedback) {
-      if (msgOnUX == userFeedback[language]) {
-        msgIsOK = true;
-        break
-      }
-    }    
-    await t.expect(true).eql(msgIsOK,uf);
-    console.log(ok + uf);
-    console.log(ok + language);
 });

@@ -1,5 +1,5 @@
 /**
- * MHB-002.loginKO.nopassword.js 
+ * MHB-001.login.js 
  * @author Francisco Mancardi [francisco.mancardi@tesisquare.com] 
  * @author Francisco Mancardi [francisco.mancardi@gmail.com]  
  */
@@ -8,8 +8,6 @@
 import { Selector } from 'testcafe';
 require('module-alias/register');
 const sw = require('@common/ta-env.js');
-const stdOutLog = sw.stdOutLog;
-
 const path = require('path');
 var whoami = path.basename(__filename).replace('.js','');
 
@@ -30,13 +28,8 @@ const navBarButtons = new pom.nvbb.navBarButtons();
 test
   .meta({'TCID': '','WKFSTATUS': 'ready'})
   (whoami, async t => {        
-
-    var ok = stdOutLog.tilde + stdOutLog.prefix;
-    var uf = 'Test Login KO because no password will be provided';
-    console.log(stdOutLog.prefix + uf);
     var op = await sw.login.login({user: 'administrator', 
-                                   password: ''});
-    
-    await t.expect(op.status).eql('ko','Login Has to fail');
-    console.log(ok + uf);
+                                   password: 'intothebox'});
+    await t.expect(op.status).eql('ok','Unexpected Login Failure');
+    await t.expect(navBarButtons.ux.actionNewIssue.exists).ok();
 });
