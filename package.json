@@ -12,7 +12,7 @@
       "dependencies": {
             "faker": "^4.1.0",
             "lodash": "^4.17.15",
-            "minimist": "^1.2.5",
+            "minimist": "^1.2.6",
             "module-alias": "^2.2.2",
             "moment": "^2.24.0",
             "moment-immutable-methods": "^1.0.9",
