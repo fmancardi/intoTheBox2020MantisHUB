@@ -14,7 +14,7 @@
             "lodash": "^4.17.15",
             "minimist": "^1.2.5",
             "module-alias": "^2.2.2",
-            "moment": "^2.24.0",
+            "moment": "^2.29.2",
             "moment-immutable-methods": "^1.0.9",
             "path": "^0.12.7",
             "testcafe": "^1.8.4",
