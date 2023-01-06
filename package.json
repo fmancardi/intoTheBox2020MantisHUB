@@ -17,7 +17,7 @@
             "moment": "^2.24.0",
             "moment-immutable-methods": "^1.0.9",
             "path": "^0.12.7",
-            "testcafe": "^1.8.4",
+            "testcafe": "^1.20.1",
             "tracer": "^1.0.3"
       }
 }
